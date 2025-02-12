@@ -1,22 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\",
+  "WorkspaceRootPath": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\palestradb.db||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\palestradb.db||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\taiocchi.21206\\desktop\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "PalestraDB.db",
+              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\PalestraDB.db",
+              "RelativeDocumentMoniker": "FitnessIntelligence\\PalestraDB.db",
+              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\PalestraDB.db",
+              "RelativeToolTip": "FitnessIntelligence\\PalestraDB.db",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGGSURBVDhPY2SAgsry0vsMDP8VoFwsgPHBn38Mgd3d3RegAkDl//9DWSADSv7/\u002BvULJwbJNzXUvi8tLTWAagEDJihNFEhITBbg5ebYj2wI0QYICAgwTJ82heH79\u002B8CLEz/90OFEQDdC3uOnPm/69ApFDEYBqmFasN0wdXbDxh2HDzJ8O79B4a3794zrN9\u002BgOHc5RtQWUyAYQALExPDt2/fGUz0NBlMDbQYvn3/xsDCgtunGDJ//v5l\u002BP37F8Pff38Z/gHZf37/Zvjz5y9UFhNgGPDz508GUOI4cPQUw74jJxgYgZxTZ88DXfIDogANYBhgpKvBEObnxsDHw8XwF2jzsxdPGR49eczQ0TeR4cbN21BVCIDTc4FeLgyezjYMHz98ZGirKWf48O4dAwcHG1QWAXCHDhB8/QoMQKCK3KJSBlZWZpSUCwN4DVBXVWaoKMpnsLG0YOjtaGNQVMDMKngNAAFuLi6G8NBgKA8TEDSAEEDKzsXA7MyIJzsjg/8P2jt7FRkYGBgAmdPDqvBXzR4AAAAASUVORK5CYII=",
+              "WhenOpened": "2025-02-12T12:58:31.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\index.html",
+              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\index.html",
               "RelativeDocumentMoniker": "FitnessIntelligence\\index.html",
-              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\index.html",
+              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\index.html",
               "RelativeToolTip": "FitnessIntelligence\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-02-07T07:34:06.256Z",
               "EditorCaption": ""
@@ -45,11 +62,11 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "UtentiController.cs",
-              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\UtentiController.cs",
+              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\UtentiController.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\UtentiController.cs",
-              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\UtentiController.cs",
+              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\UtentiController.cs",
               "RelativeToolTip": "FitnessIntelligence\\UtentiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T07:32:03.198Z",
               "EditorCaption": ""
@@ -58,24 +75,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Utente.cs",
-              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\Utente.cs",
+              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Utente.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\Utente.cs",
-              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\Utente.cs",
+              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Utente.cs",
               "RelativeToolTip": "FitnessIntelligence\\Utente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T07:31:10.418Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\appsettings.json",
               "RelativeDocumentMoniker": "FitnessIntelligence\\appsettings.json",
-              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\appsettings.json",
+              "ToolTip": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\appsettings.json",
               "RelativeToolTip": "FitnessIntelligence\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-02-07T07:28:35.268Z",
               "EditorCaption": ""
