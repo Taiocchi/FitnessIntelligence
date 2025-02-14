@@ -1,13 +1,22 @@
-﻿using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-public class Utente
+namespace FitnessIntelligence
 {
-    [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; }
+    public class Utente
+    {
+        [Key] // Indica che questa è la chiave primaria
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto-incremento
+        public int Id { get; set; }
 
-    public string Nome { get; set; }
-    public int Età { get; set; }
-    public string Ruolo { get; set; } // Studente, Docente, Allenatore
+        [Required] // Rende il campo obbligatorio
+        public string Nome { get; set; }
+
+        [Range(1, 120)] // Limita l'età a un range plausibile
+        public int Età { get; set; }
+
+        [Required]
+        public string Ruolo { get; set; } // Studente, Docente, Allenatore
+    }
+
 }

@@ -1,1 +1,38 @@
-[]
+[
+  {
+    "ContainingType": "FitnessIntelligence.UtentiController",
+    "Method": "Get",
+    "RelativePath": "api/Utenti",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[FitnessIntelligence.Utente, FitnessIntelligence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FitnessIntelligence.UtentiController",
+    "Method": "Create",
+    "RelativePath": "api/Utenti",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuovoUtente",
+        "Type": "FitnessIntelligence.Utente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,30 +1,49 @@
 ﻿<script>
-fetch("http://localhost:5140/api/utenti")
-   .then(response => response.json())
-   .then(data => console.log(data));
+    fetch("https://localhost:7118/api/utenti") // Usa la porta HTTPS corretta
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error("Errore:", error));
 </script>
 <!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Progressi Palestra</title>
-     Aggiungi il CSS personalizzato (se necessario) 
+    <title>Inserimento Dati Utente</title>
     <style>
         #progressChart {
             max-width: 600px;
             margin: 20px auto;
         }
     </style>
-     Aggiungi il link a Chart.js 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Monitoraggio Progressi</h1>
-     Canvas per il grafico 
+    <h1>Monitoraggio Progressi Palestra</h1>
+
+    <!-- Modulo per aggiungere un nuovo utente -->
+    <h2>Aggiungi Nuovo Utente</h2>
+    <form id="userForm">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" id="cognome" name="cognome" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Aggiungi Utente</button>
+    </form>
+
+    <!-- Lista utenti (opzionale per visualizzare gli utenti aggiunti) -->
+    <ul id="utentiList"></ul>
+
+    <!-- Canvas per il grafico -->
     <canvas id="progressChart"></canvas>
-     Script del grafico 
+
     <script>
+        // Crea il grafico iniziale
         const ctx = document.getElementById('progressChart').getContext('2d');
         const chart = new Chart(ctx, {
             type: 'bar',
@@ -39,7 +58,62 @@ fetch("http://localhost:5140/api/utenti")
                 }]
             }
         });
+
+        // Gestione del modulo di inserimento dati
+        const userForm = document.getElementById('userForm');
+        userForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Impedisce l'invio del modulo tradizionale
+
+            // Ottieni i dati dal modulo
+            const nome = document.getElementById('nome').value;
+            const cognome = document.getElementById('cognome').value;
+            const email = document.getElementById('email').value;
+
+            // Crea un oggetto con i dati
+            const nuovoUtente = {
+                nome: nome,
+                cognome: cognome,
+                email: email
+            };
+
+            // Invia una richiesta POST all'API per aggiungere l'utente
+            fetch("https://localhost:7118/api/utenti", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(nuovoUtente)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Utente aggiunto:", data);
+
+                    // Aggiungi l'utente alla lista (opzionale)
+                    const utentiList = document.getElementById("utentiList");
+                    const li = document.createElement("li");
+                    li.textContent = `${data.nome} ${data.cognome} - ${data.email}`;
+                    utentiList.appendChild(li);
+
+                    // Pulisci il modulo
+                    userForm.reset();
+                })
+                .catch(error => {
+                    console.error("Errore nell'aggiunta dell'utente:", error);
+                });
+        });
+
+        // Carica gli utenti esistenti (se necessario)
+        fetch("https://localhost:7118/api/utenti")
+            .then(response => response.json())
+            .then(data => {
+                const utentiList = document.getElementById("utentiList");
+                data.forEach(utente => {
+                    const li = document.createElement("li");
+                    li.textContent = `${utente.nome} ${utente.cognome} - ${utente.email}`;
+                    utentiList.appendChild(li);
+                });
+            })
+            .catch(error => console.error("Errore nel caricamento utenti:", error));
     </script>
 </body>
 </html>
-

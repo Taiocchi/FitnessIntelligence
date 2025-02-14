@@ -1,29 +1,34 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-[Route("api/[controller]")]
-[ApiController]
-public class UtentiController : ControllerBase
+namespace FitnessIntelligence
+
 {
-    private readonly IMongoCollection<Utente> _utentiCollection;
-
-    public UtentiController()
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UtentiController : ControllerBase
     {
-        var client = new MongoClient("mongodb://localhost:27017");
-        var database = client.GetDatabase("PalestraDB");
-        _utentiCollection = database.GetCollection<Utente>("Utenti");
-    }
+        private readonly PalestraDBContext _context;
 
-    [HttpGet]
-    public async Task<List<Utente>> Get() =>
-        await _utentiCollection.Find(u => true).ToListAsync();
+        public UtentiController(PalestraDBContext context)
+        {
+            _context = context;
+        }
 
-    [HttpPost]
-    public async Task<IActionResult> Create(Utente nuovoUtente)
-    {
-        await _utentiCollection.InsertOneAsync(nuovoUtente);
-        return CreatedAtAction(nameof(Get), new { id = nuovoUtente.Id }, nuovoUtente);
+        [HttpGet]
+        public async Task<ActionResult<List<Utente>>> Get()
+        {
+            return await _context.Utenti.ToListAsync();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(Utente nuovoUtente)
+        {
+            _context.Utenti.Add(nuovoUtente);
+            await _context.SaveChangesAsync();
+            return CreatedAtAction(nameof(Get), new { id = nuovoUtente.Id }, nuovoUtente);
+        }
     }
 }
