@@ -2,6 +2,7 @@
 using FitnessIntelligence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -9,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FitnessIntelligence.Migrations
 {
     [DbContext(typeof(PalestraDBContext))]
-    partial class PalestraDBContextModelSnapshot : ModelSnapshot
+    [Migration("20250219105517_AggiuntaEmailUtente")]
+    partial class AggiuntaEmailUtente
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
@@ -30,7 +32,7 @@ namespace FitnessIntelligence.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("Eta")
+                    b.Property<int>("Età")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Nome")

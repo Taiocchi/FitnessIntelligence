@@ -15,7 +15,7 @@ namespace FitnessIntelligence.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nome = table.Column<string>(type: "TEXT", nullable: false),
-                    Età = table.Column<int>(type: "INTEGER", nullable: false),
+                    Eta = table.Column<int>(type: "INTEGER", nullable: false),
                     Ruolo = table.Column<string>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>

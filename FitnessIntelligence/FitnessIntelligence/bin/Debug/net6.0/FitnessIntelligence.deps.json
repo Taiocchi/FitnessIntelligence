@@ -9,7 +9,8 @@
       "FitnessIntelligence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "6.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.0",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.2"
         },
         "runtime": {
           "FitnessIntelligence.dll": {}
@@ -103,6 +104,7 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/9.0.2": {},
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
@@ -373,6 +375,13 @@
       "sha512": "sha512-cx55qNWk5JmUMZgMfGvfwodW2z/t3Kix7Fbso9BxCPnPVaiVm8k9C4QLjegqJVvuRAA7RZigMYAqeRZ9Q4fWWQ==",
       "path": "microsoft.entityframeworkcore.sqlite.core/6.0.0",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/9.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5D4LQ9zYexFOcq0WzXOCCnP74+s9mBGNjh5mtkWFzM/DbY+rpDqrXjPq7peob/ZHAAqK+9Pfv2VK+tNf8C6QaQ==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.2",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",

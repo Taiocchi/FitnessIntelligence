@@ -1,5 +1,5 @@
 ﻿<script>
-    fetch("https://localhost:7118/api/utenti") // Usa la porta HTTPS corretta
+    fetch("http://localhost:7118/api/utenti") // Usa la porta HTTPS corretta
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error("Errore:", error));
@@ -33,8 +33,20 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
+        <!-- Nuovi campi -->
+        <label for="eta">Età:</label>
+        <input type="number" id="eta" name="eta" required><br><br>
+
+        <label for="ruolo">Ruolo:</label>
+        <select id="ruolo" name="ruolo" required>
+            <option value="Studente">Studente</option>
+            <option value="Docente">Docente</option>
+            <option value="Allenatore">Allenatore</option>
+        </select><br><br>
+
         <button type="submit">Aggiungi Utente</button>
     </form>
+
 
     <!-- Lista utenti (opzionale per visualizzare gli utenti aggiunti) -->
     <ul id="utentiList"></ul>
@@ -73,8 +85,11 @@
             const nuovoUtente = {
                 nome: nome,
                 cognome: cognome,
-                email: email
+                email: email,
+                eta: document.getElementById('eta').value,  // Aggiungi 'età'
+                ruolo: document.getElementById('ruolo').value  // Aggiungi 'ruolo'
             };
+
 
             // Invia una richiesta POST all'API per aggiungere l'utente
             fetch("https://localhost:7118/api/utenti", {

@@ -5,18 +5,25 @@ namespace FitnessIntelligence
 {
     public class Utente
     {
-        [Key] // Indica che questa è la chiave primaria
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto-incremento
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+
         public int Id { get; set; }
 
-        [Required] // Rende il campo obbligatorio
+        [Required]
         public string Nome { get; set; }
 
-        [Range(1, 120)] // Limita l'età a un range plausibile
-        public int Età { get; set; }
+        [Required]
+        public string Cognome { get; set; }
+
+        [Required, EmailAddress]
+        public string Email { get; set; }
+
+        [Column("Eta")]
+        public int Eta { get; set; }
 
         [Required]
-        public string Ruolo { get; set; } // Studente, Docente, Allenatore
-    }
+        public string Ruolo { get; set; }
 
+    }
 }

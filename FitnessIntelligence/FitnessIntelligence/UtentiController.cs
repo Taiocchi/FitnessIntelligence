@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace FitnessIntelligence
-
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -26,8 +25,15 @@ namespace FitnessIntelligence
         [HttpPost]
         public async Task<IActionResult> Create(Utente nuovoUtente)
         {
+            // Log dei dati ricevuti
+            Console.WriteLine($"Ricevuto utente: {nuovoUtente.Nome}, {nuovoUtente.Cognome}, {nuovoUtente.Email}, {nuovoUtente.Eta}, {nuovoUtente.Ruolo}");
+
             _context.Utenti.Add(nuovoUtente);
             await _context.SaveChangesAsync();
+
+            // Log per vedere se l'utente è stato aggiunto
+            Console.WriteLine($"Utente aggiunto con ID: {nuovoUtente.Id}");
+
             return CreatedAtAction(nameof(Get), new { id = nuovoUtente.Id }, nuovoUtente);
         }
     }

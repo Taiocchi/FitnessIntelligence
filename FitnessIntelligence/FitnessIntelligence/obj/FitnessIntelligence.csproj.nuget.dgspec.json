@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {}
+    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {
+    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
+        "projectUniqueName": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
         "projectName": "FitnessIntelligence",
-        "projectPath": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
-        "packagesPath": "C:\\Users\\taiocchi.21206\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\taiocchi.21206\\Desktop\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\obj\\",
+        "projectPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
+        "packagesPath": "C:\\Users\\lucta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\taiocchi.21206\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\lucta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,6 +73,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.33, 6.0.33]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
