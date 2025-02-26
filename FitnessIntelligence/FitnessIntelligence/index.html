@@ -1,112 +1,82 @@
-﻿<script>
-    fetch("http://localhost:7118/api/utenti") // Usa la porta HTTPS corretta
-        .then(response => response.json())
-        .then(data => console.log(data))
-        .catch(error => console.error("Errore:", error));
-</script>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inserimento Dati Utente</title>
-    <style>
-        #progressChart {
-            max-width: 600px;
-            margin: 20px auto;
-        }
-    </style>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="StyleSheet.css"> <!-- Collega il CSS esterno -->
 </head>
 <body>
     <h1>Monitoraggio Progressi Palestra</h1>
 
-    <!-- Modulo per aggiungere un nuovo utente -->
-    <h2>Aggiungi Nuovo Utente</h2>
-    <form id="userForm">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required><br><br>
+    <div class="container">
+        <!-- Modulo per aggiungere un nuovo utente -->
+        <h2>Aggiungi Nuovo Utente</h2>
+        <form id="userForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required><br>
 
-        <label for="cognome">Cognome:</label>
-        <input type="text" id="cognome" name="cognome" required><br><br>
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+            <label for="eta">Età (14-70 anni):</label>
+            <input type="number" id="eta" name="eta" min="14" max="70" required><br>
 
-        <!-- Nuovi campi -->
-        <label for="eta">Età:</label>
-        <input type="number" id="eta" name="eta" required><br><br>
+            <label for="ruolo">Ruolo:</label>
+            <select id="ruolo" name="ruolo" required>
+                <option value="Studente">Studente</option>
+                <option value="Docente">Docente</option>
+                <option value="Allenatore">Allenatore</option>
+            </select><br>
 
-        <label for="ruolo">Ruolo:</label>
-        <select id="ruolo" name="ruolo" required>
-            <option value="Studente">Studente</option>
-            <option value="Docente">Docente</option>
-            <option value="Allenatore">Allenatore</option>
-        </select><br><br>
+            <button type="submit">Aggiungi Utente</button>
+        </form>
 
-        <button type="submit">Aggiungi Utente</button>
-    </form>
+        <!-- Lista utenti -->
+        <h2>Utenti Registrati</h2>
+        <ul id="utentiList"></ul>
 
-
-    <!-- Lista utenti (opzionale per visualizzare gli utenti aggiunti) -->
-    <ul id="utentiList"></ul>
-
-    <!-- Canvas per il grafico -->
-    <canvas id="progressChart"></canvas>
+        <!-- Messaggio di errore -->
+        <div class="error" id="errorMessage"></div>
+    </div>
 
     <script>
-        // Crea il grafico iniziale
-        const ctx = document.getElementById('progressChart').getContext('2d');
-        const chart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-                labels: ['Settimana 1', 'Settimana 2', 'Settimana 3'],
-                datasets: [{
-                    label: 'Calorie Bruciate',
-                    data: [300, 400, 500],
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            }
-        });
-
         // Gestione del modulo di inserimento dati
         const userForm = document.getElementById('userForm');
-        userForm.addEventListener('submit', function (event) {
-            event.preventDefault(); // Impedisce l'invio del modulo tradizionale
+        const utentiList = document.getElementById('utentiList');
+        const errorMessage = document.getElementById('errorMessage');
 
-            // Ottieni i dati dal modulo
+        userForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+
             const nome = document.getElementById('nome').value;
             const cognome = document.getElementById('cognome').value;
-            const email = document.getElementById('email').value;
+            const eta = document.getElementById('eta').value;
+            const ruolo = document.getElementById('ruolo').value;
 
-            // Crea un oggetto con i dati
-            const nuovoUtente = {
-                nome: nome,
-                cognome: cognome,
-                email: email,
-                eta: document.getElementById('eta').value,  // Aggiungi 'età'
-                ruolo: document.getElementById('ruolo').value  // Aggiungi 'ruolo'
-            };
+            // Controllo età (compresa tra 14 e 70)
+            if (eta < 14 || eta > 70) {
+                errorMessage.textContent = "L'età deve essere compresa tra 14 e 70 anni.";
+                return;
+            }
 
+            const nuovoUtente = { nome, cognome, eta, ruolo };
 
-            // Invia una richiesta POST all'API per aggiungere l'utente
+            // Reset messaggio di errore
+            errorMessage.textContent = '';
+
+            // Invia richiesta POST
             fetch("https://localhost:7118/api/utenti", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(nuovoUtente)
             })
                 .then(response => response.json())
                 .then(data => {
                     console.log("Utente aggiunto:", data);
 
-                    // Aggiungi l'utente alla lista (opzionale)
-                    const utentiList = document.getElementById("utentiList");
                     const li = document.createElement("li");
-                    li.textContent = `${data.nome} ${data.cognome} - ${data.email}`;
+                    li.textContent = `${data.nome} ${data.cognome} - ${data.ruolo}`;
                     utentiList.appendChild(li);
 
                     // Pulisci il modulo
@@ -114,21 +84,24 @@
                 })
                 .catch(error => {
                     console.error("Errore nell'aggiunta dell'utente:", error);
+                    errorMessage.textContent = "Si è verificato un errore durante l'aggiunta dell'utente. Riprova.";
                 });
         });
 
-        // Carica gli utenti esistenti (se necessario)
+        // Carica gli utenti esistenti
         fetch("https://localhost:7118/api/utenti")
             .then(response => response.json())
             .then(data => {
-                const utentiList = document.getElementById("utentiList");
                 data.forEach(utente => {
                     const li = document.createElement("li");
-                    li.textContent = `${utente.nome} ${utente.cognome} - ${utente.email}`;
+                    li.textContent = `${utente.nome} ${utente.cognome} - ${utente.ruolo}`;
                     utentiList.appendChild(li);
                 });
             })
-            .catch(error => console.error("Errore nel caricamento utenti:", error));
+            .catch(error => {
+                console.error("Errore nel caricamento utenti:", error);
+                errorMessage.textContent = "Si è verificato un errore nel caricamento degli utenti.";
+            });
     </script>
 </body>
 </html>

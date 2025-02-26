@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FitnessIntelligence
@@ -36,5 +38,19 @@ namespace FitnessIntelligence
 
             return CreatedAtAction(nameof(Get), new { id = nuovoUtente.Id }, nuovoUtente);
         }
+        /*[Authorize]
+        [HttpGet("allenamenti")]
+        public async Task<ActionResult<List<Allenamento>>> GetAllenamenti()
+        {
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            var utente = await _context.Utenti.FirstOrDefaultAsync(u => u.Email == email);
+            if (utente == null) return NotFound("Utente non trovato");
+
+            var allenamenti = await _context.Allenamenti
+                .Where(a => a.Obiettivo == utente.Ruolo)
+                .ToListAsync();
+
+            return Ok(allenamenti);
+        }*/
     }
 }

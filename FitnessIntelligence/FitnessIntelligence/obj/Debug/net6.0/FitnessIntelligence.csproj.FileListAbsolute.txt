@@ -154,3 +154,11 @@ C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\FitnessIntelligence.pdb
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\FitnessIntelligence.genruntimeconfig.cache
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\ref\FitnessIntelligence.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.Google.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
