@@ -1,11 +1,13 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using FitnessIntelligence.Model;
+using FitnessIntelligence.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace FitnessIntelligence
+namespace FitnessIntelligence.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -20,6 +22,13 @@ namespace FitnessIntelligence
 
         [HttpGet]
         public async Task<ActionResult<List<Utente>>> Get()
+        {
+            return await _context.Utenti.ToListAsync();
+        }
+
+        [Authorize]
+        [HttpGet("protected")]
+        public async Task<ActionResult<List<Utente>>> GetProtected()
         {
             return await _context.Utenti.ToListAsync();
         }

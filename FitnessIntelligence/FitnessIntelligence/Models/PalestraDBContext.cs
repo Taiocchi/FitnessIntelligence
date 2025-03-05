@@ -1,6 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using FitnessIntelligence.Model;
+using Microsoft.EntityFrameworkCore;
 
-namespace FitnessIntelligence
+namespace FitnessIntelligence.Models
 {
     public class PalestraDBContext : DbContext
     {

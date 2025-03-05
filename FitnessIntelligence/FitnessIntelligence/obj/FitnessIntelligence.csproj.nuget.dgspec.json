@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {}
+    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {
+    "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
+        "projectUniqueName": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
         "projectName": "FitnessIntelligence",
-        "projectPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
+        "projectPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
         "packagesPath": "C:\\Users\\lucta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\obj\\",
+        "outputPath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lucta\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.69.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
               "version": "[6.0.0, )"

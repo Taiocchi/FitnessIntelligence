@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FitnessIntelligence
+namespace FitnessIntelligence.Model
 {
     public class Utente
     {
