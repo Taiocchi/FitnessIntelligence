@@ -1,11 +1,40 @@
 ﻿<html>
 <body>
+    <!-- Includi il client di Google Sign-In -->
     <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+    <!-- Configura Google Sign-In con il tuo client_id -->
     <div id="g_id_onload"
          data-client_id="795875881614-6url7c5tbg8ptaemrpo8co0o5tvu9cbt.apps.googleusercontent.com"
          data-ux_mode="redirect"
          data-login_uri="https://localhost:7118/api/auth/google-login">
     </div>
-    <div class="g_id_signin" data-type="standard"></div>
+
+    <!-- Bottone di login che invoca la funzione di callback -->
+    <div class="g_id_signin" data-type="standard" data-callback="handleCredentialResponsePage1"></div>
+
+    <script>
+        // Funzione di callback per gestire la risposta dal login di Google
+        function handleCredentialResponsePage1(response) {
+            console.log("Funzione chiamata con risposta:", response); // 🔍 Debug
+            fetch("https://localhost:7118/api/auth/google-login", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({ credential: response.credential }),
+                credentials: "include" // Assicura che i cookie vengano inviati
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Risposta dal server:", data); // 🔍 Debug
+                    if (data.message === "Login effettuato con successo") {
+                        console.log("Reindirizzamento a index.html"); // 🔍 Debug
+                        window.location.href = "index.html"; // ✅ Reindirizza
+                    } else {
+                        console.error("Errore login:", data);
+                    }
+                })
+                .catch(err => console.error("Errore:", err));
+        }
+    </script>
 </body>
 </html>

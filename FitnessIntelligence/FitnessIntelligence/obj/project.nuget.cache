@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PEP9RoQ/gdE=",
+  "dgSpecHash": "LxjirmYbwZk=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
+  "projectFilePath": "C:\\Users\\lucta\\OneDrive\\Desktop\\Luca\\C#\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucta\\.nuget\\packages\\google.apis\\1.69.0\\google.apis.1.69.0.nupkg.sha512",
     "C:\\Users\\lucta\\.nuget\\packages\\google.apis.auth\\1.69.0\\google.apis.auth.1.69.0.nupkg.sha512",

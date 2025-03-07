@@ -29,11 +29,9 @@ namespace FitnessIntelligence.Controllers
             _config = config;
         }
 
-
         [HttpPost("google-login")]
         public async Task<IActionResult> GoogleLogin([FromForm] string credential)
         {
-            //valido l'id token ricevuto a seguito di login da google
             string idToken = credential;
 
             try
@@ -45,20 +43,30 @@ namespace FitnessIntelligence.Controllers
 
                 var validPayload = await GoogleJsonWebSignature.ValidateAsync(idToken, settings);
 
-                //se arrivo qui senza eccezioni id token valido
-                //genero un token jwt di accesso da rilasciare
-                var token = GenerateJwtAccessToken(validPayload.Email,1);
-                //dovrebbe essere memorizzato per essere invaldiato
+                var token = GenerateJwtAccessToken(validPayload.Email, 1);
                 var refreshToken = GenerateJwtRefreshToken(validPayload.Email, 10);
 
-                return Ok(new { AccessToken = token, RefreshToken = refreshToken });
+                var cookieOptions = new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,  // Assicura che i cookie siano trasmessi solo su HTTPS
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddHours(1)
+                };
+
+                Response.Cookies.Append("AccessToken", token, cookieOptions);
+
+                cookieOptions.Expires = DateTime.UtcNow.AddDays(7);
+                Response.Cookies.Append("RefreshToken", refreshToken, cookieOptions);
+
+                return Ok(new { message = "Login effettuato con successo" });
             }
             catch (InvalidJwtException ex)
             {
                 return Unauthorized(new { message = "Token non valido", error = ex.Message });
             }
-
         }
+
 
         [HttpPost("refresh")]
         public IActionResult Refresh([FromBody] TokenRequest request)
@@ -94,13 +102,38 @@ namespace FitnessIntelligence.Controllers
             catch (Exception ex)
             {
                 return Unauthorized(new { message = "Token non valido", error = ex.Message });
-            }
-
-
-
-            
+            }        
         }
 
+        [HttpGet("validate")]
+        public IActionResult ValidateToken()
+        {
+            var token = Request.Cookies["AccessToken"];
+
+            if (string.IsNullOrEmpty(token))
+                return Unauthorized(new { message = "Accesso negato" });
+
+            var handler = new JwtSecurityTokenHandler();
+            var tokenValidationParams = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidIssuer = _config["Jwt:Issuer"],
+                ValidateAudience = true,
+                ValidAudience = _config["Jwt:Audience"],
+                ValidateLifetime = true,
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]))
+            };
+
+            try
+            {
+                handler.ValidateToken(token, tokenValidationParams, out _);
+                return Ok(new { message = "Token valido" });
+            }
+            catch (Exception)
+            {
+                return Unauthorized(new { message = "Accesso negato" });
+            }
+        }
 
         private string GenerateJwtAccessToken(string email, int expirationTimeHours)
         {

@@ -380,3 +380,10 @@ C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\FitnessIntelligence.pdb
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\FitnessIntelligence.genruntimeconfig.cache
 C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\obj\Debug\net6.0\ref\FitnessIntelligence.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Google.Apis.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Google.Apis.Auth.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Google.Apis.Core.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\System.Management.dll
+C:\Users\lucta\OneDrive\Desktop\Luca\C#\FitnessIntelligence\FitnessIntelligence\FitnessIntelligence\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Management.dll
