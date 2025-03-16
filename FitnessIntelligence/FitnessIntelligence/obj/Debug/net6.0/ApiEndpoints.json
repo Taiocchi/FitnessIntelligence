@@ -10,7 +10,7 @@
       {
         "Name": "credential",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -29,16 +29,6 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "FitnessIntelligence.Controllers.AuthController",
-    "Method": "ValidateToken",
-    "RelativePath": "api/Auth/validate",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

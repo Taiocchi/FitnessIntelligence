@@ -40,57 +40,11 @@
         <div class="error" id="errorMessage"></div>
     </div>
 
-    <div id="g_id_onload"
-         data-client_id="il-mio-client-id"
-         data-callback="handleCredentialResponsePage2"
-         data-ux_mode="redirect"
-         data-login_uri="https://localhost:7118/api/auth/google-login">
-    </div>
-    <div class="g_id_signin" data-type="standard"></div>
-
     <script>
         // Gestione del modulo di inserimento dati
         const userForm = document.getElementById('userForm');
         const utentiList = document.getElementById('utentiList');
         const errorMessage = document.getElementById('errorMessage');
-
-        function handleCredentialResponsePage2(response) {
-            fetch("https://localhost:7118/api/auth/google-login", {
-                method: "POST",
-                headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams({ credential: response.credential }),
-                credentials: "include" // ✅ Assicura che i cookie vengano salvati
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log("Risposta dal server:", data); // 🔍 Debug
-
-                    if (data.message === "Login effettuato con successo") {
-                        console.log("Reindirizzamento a index.html"); // 🔍 Debug
-                        window.location.href = "index.html"; // ✅ Reindirizza
-                    } else {
-                        console.error("Errore login:", data);
-                    }
-                })
-                .catch(err => console.error("Errore:", err));
-        }
-
-        window.onload = function () {
-            fetch("https://localhost:7118/api/auth/validate", {
-                method: "GET",
-                credentials: "include" // ✅ Importante per inviare i cookie
-            })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.message !== "Token valido") {
-                        window.location.href = "login.html"; // Se il token non è valido, torna alla login
-                    }
-                })
-                .catch(err => {
-                    console.error("Errore di validazione:", err);
-                    window.location.href = "login.html"; // Se c'è un errore, forza il login
-                });
-        };
 
         userForm.addEventListener('submit', function (event) {
             event.preventDefault();
