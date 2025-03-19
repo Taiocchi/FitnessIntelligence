@@ -735,14 +735,14 @@
     <StaticWebAssetEndpoint Include="_content/FitnessIntelligence/login.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\login.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-u5qkBdqS09QLpGvgAk335XP33xyHHNJ7U9tDBcArFP4="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1477"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022u5qkBdqS09QLpGvgAk335XP33xyHHNJ7U9tDBcArFP4=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 13:21:53 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ZXmLdRGlN5/ORaNxF5iArnxlVbMLrdv2O1B4ragMvlE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2735"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022ZXmLdRGlN5/ORaNxF5iArnxlVbMLrdv2O1B4ragMvlE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 19 Mar 2025 12:33:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/FitnessIntelligence/login.r8o4fmsgds.html">
+    <StaticWebAssetEndpoint Include="_content/FitnessIntelligence/login.jycgtxg6gj.html">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\login.html'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"r8o4fmsgds"},{"Name":"integrity","Value":"sha256-u5qkBdqS09QLpGvgAk335XP33xyHHNJ7U9tDBcArFP4="},{"Name":"label","Value":"_content/FitnessIntelligence/login.html"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1477"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022u5qkBdqS09QLpGvgAk335XP33xyHHNJ7U9tDBcArFP4=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 13:21:53 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"jycgtxg6gj"},{"Name":"integrity","Value":"sha256-ZXmLdRGlN5/ORaNxF5iArnxlVbMLrdv2O1B4ragMvlE="},{"Name":"label","Value":"_content/FitnessIntelligence/login.html"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2735"},{"Name":"Content-Type","Value":"text/html"},{"Name":"ETag","Value":"\u0022ZXmLdRGlN5/ORaNxF5iArnxlVbMLrdv2O1B4ragMvlE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 19 Mar 2025 12:33:23 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
   </ItemGroup>
 </Project>

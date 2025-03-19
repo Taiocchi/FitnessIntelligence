@@ -27,9 +27,33 @@
 
                 console.log(content);
 
-                // Reindirizza l'utente a "index.html"
-                window.location.href = "index.html";
+                // Decodifica l'ID Token per estrarre l'email
+                const decodedToken = decodeJwt(idToken);  // Decodifica il token
+                const email = decodedToken.email;  // Estrae l'email dal payload del token
+
+                if (email) {
+                    // Salviamo l'email nel localStorage
+                    localStorage.setItem("userEmail", email);
+                    console.log("Email salvata nel localStorage: " + email);
+
+                    // Reindirizza alla pagina principale (index.html) dopo aver salvato l'email
+                    window.location.href = "index.html";
+                } else {
+                    console.log("Email non disponibile nel token.");
+                }
+
             })();
+
+            // Funzione per decodificare un JWT
+            function decodeJwt(token) {
+                const base64Url = token.split('.')[1];  // La seconda parte del JWT (il payload)
+                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');  // Aggiusta la stringa base64
+                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                }).join(''));
+
+                return JSON.parse(jsonPayload);  // Restituisce il payload come oggetto JSON
+            }
         }
     </script>
     <div id="g_id_onload"
