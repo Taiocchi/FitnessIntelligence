@@ -1,0 +1,11 @@
+"profiles": {
+  "MyApp": {
+    "commandName": "Project",
+    "launchBrowser": true,
+    "launchUrl": "login.html",  // Qui puoi mettere il percorso specifico
+    "applicationUrl": "https://localhost:7118;http://localhost:5089",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
+    }
+  }
+}
