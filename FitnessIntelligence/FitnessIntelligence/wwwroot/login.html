@@ -3,32 +3,38 @@
     <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
         function handleCredentialResponse(response) {
-            //riceve l'id token da Google e lo gira alla API di backend per validazione
+            // Riceve l'id token da Google e lo gira alla API di backend per validazione
             getAccessTokens(response.credential);
-
         }
-        async function getAccessTokens(idToken) {
 
+        async function getAccessTokens(idToken) {
             const url = "https://localhost:7118/api/auth/google-login";
             const param = JSON.stringify(idToken);
-            console.log("ciao " + idToken);
-            (async () => {
+
+            try {
+                // Invia la richiesta per ottenere i token
                 const rawResponse = await fetch(url, {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    },
-                    body: param
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: param
                 });
+
 
                 //in content oggetto json con i due token
                 const content = await rawResponse.json();
 
-                console.log(content);
+                //debug content, oggetto che contiene i due token
+                console.log("AT: "+JSON.stringify(content));
 
-                // Decodifica l'ID Token per estrarre l'email
-                const decodedToken = decodeJwt(idToken);  // Decodifica il token
+                // Decodifica l'access token Token per estrarre l'email
+                const decodedToken = decodeJwt(content.accessToken);  // Decodifica il token
+
+                //debug access token decodificato
+                console.log("DT: " + JSON.stringify(decodedToken));
+
                 const email = decodedToken.email;  // Estrae l'email dal payload del token
 
                 if (email) {
@@ -36,24 +42,35 @@
                     localStorage.setItem("userEmail", email);
                     console.log("Email salvata nel localStorage: " + email);
 
+                    // Assicurati di salvare il token in una chiave corretta
+                    if (content) {
+                        // Correzione: salva l'oggetto che contiene sia access token che refresh token
+                        localStorage.setItem("Token", content.accessToken);
+                        console.log(content.accessToken);
+                    } else {
+                        console.log("Token non trovato nella risposta.");
+                    }
+
                     // Reindirizza alla pagina principale (index.html) dopo aver salvato l'email
                     window.location.href = "index.html";
                 } else {
                     console.log("Email non disponibile nel token.");
                 }
-
-            })();
-
-            // Funzione per decodificare un JWT
-            function decodeJwt(token) {
-                const base64Url = token.split('.')[1];  // La seconda parte del JWT (il payload)
-                const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');  // Aggiusta la stringa base64
-                const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
-                    return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-                }).join(''));
-
-                return JSON.parse(jsonPayload);  // Restituisce il payload come oggetto JSON
+            
+            } catch (error) {
+                console.error("Errore durante l'ottenimento dei token:", error);
             }
+        }
+
+        // Funzione per decodificare un JWT
+        function decodeJwt(token) {
+            const base64Url = token.split('.')[1];  // La seconda parte del JWT (il payload)
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');  // Aggiusta la stringa base64
+            const jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+                return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+            }).join(''));
+
+            return JSON.parse(jsonPayload);  // Restituisce il payload come oggetto JSON
         }
     </script>
     <div id="g_id_onload"
@@ -63,4 +80,3 @@
     <div class="g_id_signin" data-type="standard"></div>
 </body>
 </html>
-

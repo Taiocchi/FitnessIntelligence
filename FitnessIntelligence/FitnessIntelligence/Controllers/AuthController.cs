@@ -3,6 +3,7 @@ using Google.Apis.Auth;
 using Google.Apis.Auth.OAuth2.Requests;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -47,9 +48,9 @@ namespace FitnessIntelligence.Controllers
 
                 //se arrivo qui senza eccezioni id token valido
                 //genero un token jwt di accesso da rilasciare
-                var token = GenerateJwtAccessToken(validPayload.Email,1);
+                var token = GenerateJwtToken(validPayload.Email,1);
                 //dovrebbe essere memorizzato per essere invaldiato
-                var refreshToken = GenerateJwtRefreshToken(validPayload.Email, 10);
+                var refreshToken = GenerateJwtToken(validPayload.Email, 10);
 
                 return Ok(new { AccessToken = token, RefreshToken = refreshToken });
             }
@@ -86,23 +87,21 @@ namespace FitnessIntelligence.Controllers
 
 
                 //se ok returno nuova coppia di token
+                //TODO: mettere la mail che è contenuta nel referesh token, qui sotto placeholder
 
-                var newAccessToken = GenerateJwtAccessToken("ciao@ciao.it", 1);
-                var newRefreshToken = GenerateJwtRefreshToken("ciao@ciao.it", 10);
+                var newAccessToken = GenerateJwtToken("ciao@ciao.it", 1);
+                var newRefreshToken = GenerateJwtToken("ciao@ciao.it", 10);
                 return Ok(new { AccessToken = newAccessToken, RefreshToken = newRefreshToken });
             }
             catch (Exception ex)
             {
                 return Unauthorized(new { message = "Token non valido", error = ex.Message });
             }
-
-
-
             
         }
 
 
-        private string GenerateJwtAccessToken(string email, int expirationTimeHours)
+        private string GenerateJwtToken(string email, int expirationTimeHours)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
@@ -110,27 +109,14 @@ namespace FitnessIntelligence.Controllers
             var token = new JwtSecurityToken(
                 issuer: _config["Jwt:Issuer"],
                 audience: _config["Jwt:Audience"],
-                claims: new List<Claim> { new Claim(ClaimTypes.Email, email) },
+                claims: new List<Claim> { new Claim(Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames.Email, email) },
                 expires: DateTime.UtcNow.AddHours(expirationTimeHours),
-                signingCredentials: creds);
+            signingCredentials: creds);
+
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
 
-        private string GenerateJwtRefreshToken(string email, int expirationTimeHours)
-        {
-            var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
-            var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-            var token = new JwtSecurityToken(
-                issuer: _config["Jwt:Issuer"],
-                audience: _config["Jwt:Audience"],
-                claims: new List<Claim> { new Claim(ClaimTypes.Email, email) },
-                expires: DateTime.UtcNow.AddHours(expirationTimeHours),
-                signingCredentials: creds);
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
-        }
 
 
     }

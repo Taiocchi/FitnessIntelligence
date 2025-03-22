@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\fitnessintelligence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\controllers\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\controllers\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\models\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\models\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,26 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\wwwroot\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\models\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\models\\utente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\controllers\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|solutionrelative:fitnessintelligence\\controllers\\utenticontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{988F9B32-6D5A-499A-B4D0-02C67BF2A493}|FitnessIntelligence\\FitnessIntelligence.csproj|c:\\users\\lucta\\desktop\\info\\fitnessintelligence\\fitnessintelligence\\fitnessintelligence\\models\\palestradbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,36 +46,38 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FitnessIntelligence",
-              "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
-              "RelativeDocumentMoniker": "FitnessIntelligence\\FitnessIntelligence.csproj",
-              "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence.csproj",
-              "RelativeToolTip": "FitnessIntelligence\\FitnessIntelligence.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-19T14:55:41.718Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "FitnessIntelligence\\wwwroot\\index.html",
               "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\wwwroot\\index.html",
               "RelativeToolTip": "FitnessIntelligence\\wwwroot\\index.html",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAowJAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAuwIwAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-03-19T11:25:19.783Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "FitnessIntelligence\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "FitnessIntelligence\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFIAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-26T12:04:56.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "PalestraDBContext.cs",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Models\\PalestraDBContext.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\Models\\PalestraDBContext.cs",
@@ -91,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\appsettings.Development.json",
               "RelativeDocumentMoniker": "FitnessIntelligence\\appsettings.Development.json",
@@ -103,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\appsettings.json",
               "RelativeDocumentMoniker": "FitnessIntelligence\\appsettings.json",
@@ -111,12 +109,11 @@
               "RelativeToolTip": "FitnessIntelligence\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-04T19:57:33.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T19:57:33.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Program.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\Program.cs",
@@ -124,36 +121,23 @@
               "RelativeToolTip": "FitnessIntelligence\\Program.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAewFIAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T17:47:51.704Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T17:47:51.704Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "UtentiController.cs",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\UtentiController.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\Controllers\\UtentiController.cs",
               "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\UtentiController.cs",
               "RelativeToolTip": "FitnessIntelligence\\Controllers\\UtentiController.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAwCoAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAkwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T17:41:23.749Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "FitnessIntelligence\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "FitnessIntelligence\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwIMAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-26T12:04:56.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "Utente.cs",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\Models\\Utente.cs",
               "RelativeDocumentMoniker": "FitnessIntelligence\\Models\\Utente.cs",
@@ -165,13 +149,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "login.html",
               "DocumentMoniker": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\wwwroot\\login.html",
               "RelativeDocumentMoniker": "FitnessIntelligence\\wwwroot\\login.html",
               "ToolTip": "C:\\Users\\lucta\\Desktop\\Info\\FitnessIntelligence\\FitnessIntelligence\\FitnessIntelligence\\wwwroot\\login.html",
               "RelativeToolTip": "FitnessIntelligence\\wwwroot\\login.html",
-              "ViewState": "AgIAABoAAAAAAAAAAAAiwDcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-03-03T10:33:17.863Z",
               "EditorCaption": ""

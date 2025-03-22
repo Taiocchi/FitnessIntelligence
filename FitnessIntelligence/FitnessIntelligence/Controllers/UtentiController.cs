@@ -28,10 +28,33 @@ namespace FitnessIntelligence.Controllers
 
         [Authorize]
         [HttpGet("protected")]
-        public async Task<ActionResult<List<Utente>>> GetProtected()
+        public async Task<ActionResult<List<Utente>>> GetUtenti([FromQuery] string email)
         {
-            return await _context.Utenti.ToListAsync();
+            try
+            {
+                if (string.IsNullOrEmpty(email))
+                {
+                    return BadRequest("L'email è obbligatoria.");
+                }
+
+                var utenti = await _context.Utenti
+                    .Where(u => u.Email == email)
+                    .ToListAsync();
+
+                if (utenti.Count == 0)
+                {
+                    return NotFound("Nessun utente trovato con questa email.");
+                }
+
+                return Ok(utenti);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Errore interno del server: {ex.Message}");
+            }
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> Create(Utente nuovoUtente)

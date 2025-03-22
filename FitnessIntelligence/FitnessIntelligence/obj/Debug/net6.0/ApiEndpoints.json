@@ -69,12 +69,18 @@
   },
   {
     "ContainingType": "FitnessIntelligence.Controllers.UtentiController",
-    "Method": "GetProtected",
+    "Method": "GetUtenti",
     "RelativePath": "api/Utenti/protected",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "email",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": [
       {
         "Type": "System.Collections.Generic.List\u00601[[FitnessIntelligence.Model.Utente, FitnessIntelligence, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
